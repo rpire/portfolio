@@ -9,6 +9,7 @@
     "preview": "vite preview --port 7000"
   },
   "devDependencies": {
+    "sass": "^1.77.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
