@@ -27,3 +27,6 @@ eslint.config.js
 *.njsproj
 *.sln
 *.sw?
+
+# Developer notes
+NOTES.md
