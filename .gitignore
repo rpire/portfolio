@@ -19,6 +19,9 @@ eslint.config.js
 .prettierrc.json
 .prettierignore
 
+# Pre-commit hooks
+.husky
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
