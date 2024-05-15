@@ -16,6 +16,8 @@ dist-ssr
 .linthtmlrc.json
 .stylelintrc.json
 eslint.config.js
+.prettierrc.json
+.prettierignore
 
 # Editor directories and files
 .vscode/*
