@@ -1,103 +1,51 @@
 @use './assets/sass/abstracts/' as *;
+@use './assets/sass/styles/reset';
 
 :root {
   font-family: $text;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
   color: $secondary;
   background-color: $primary;
-  font-synthesis: none;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: $accent;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  @include center-contents;
+
+  flex-direction: column;
+  height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#changing-element,
+#change-button {
+  border-radius: 5px;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#changing-element {
+  @include center-contents;
+
+  background-color: $secondary;
+  font-size: 2rem;
+  font-weight: $semi-bold;
+  color: $primary;
+  width: 25%;
+  min-width: 200px;
+  aspect-ratio: 1;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#change-button {
+  font-size: 1.5rem;
+  color: $secondary;
+  padding: 20px 12px;
+  margin-top: 20px;
+  border: 2px solid $accent;
+  transition: background-color 0.2s;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+#change-button:hover {
+  background-color: $accent;
+  color: $primary;
 }
 
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: $primary;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: $accent;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #fff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
+#change-button:active {
+  background-color: $secondary;
+  border-color: $secondary;
 }
