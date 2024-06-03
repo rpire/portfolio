@@ -1,3 +1,15 @@
+@mixin center-contents($justify: true, $align: true) {
+  display: flex;
+
+  @if $justify {
+    justify-content: center;
+  }
+
+  @if $align {
+    align-items: center;
+  }
+}
+
 @mixin media($width) {
   @media only screen and (width > $width) {
     @content;
