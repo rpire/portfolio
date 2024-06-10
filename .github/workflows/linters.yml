@@ -1,0 +1,58 @@
+name: Linters
+
+on: pull_request
+
+env:
+  FORCE_COLOR: 1
+
+jobs:
+  linthtml:
+    name: LintHTML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Setup LintHTML
+        run: |
+          npm install --save-dev @linthtml/linthtml@0.9.6
+          [ -f .linthtmlrc.json ] || wget https://raw.githubusercontent.com/rpire/linters-configuration/main/vanilla-ts-sass/.linthtmlrc.json
+      - name: LintHTML Report
+        run: npx linthtml .
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Setup ESLint
+        run: |
+          npm install --save-dev typescript@5.2.2 globals@15.1.0 typescript-eslint@7.8.0 eslint@8.57.0 eslint-plugin-import@2.29.1
+          [ -f eslint.config.js ] || wget https://raw.githubusercontent.com/rpire/linters-configuration/main/vanilla-ts-sass/eslint.config.js
+      - name: ESLint Report
+        run: npx eslint .
+  stylelint:
+    name: Stylelint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Setup Stylelint
+        run: |
+          npm install --save-dev stylelint@16.5.0 stylelint-config-standard-scss@13.1.0
+          [ -f .stylelintrc.json ] || wget https://raw.githubusercontent.com/rpire/linters-configuration/main/vanilla-ts-sass/.stylelintrc.json
+      - name: Stylelint Report
+        run: npx stylelint "**/*.scss"
+  nodechecker:
+    name: node_modules checker
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check node_modules existence
+        run: |
+          if [ -d "node_modules/" ]; then echo -e "\e[1;31mThe node_modules/ folder was pushed to the repo. Please remove it from the GitHub repository and try again."; echo -e "\e[1;32mYou can set up a .gitignore file with this folder included on it to prevent this from happening in the future." && exit 1; fi
