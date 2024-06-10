@@ -1,43 +1,72 @@
 @use './assets/sass/abstracts/' as *;
 @use './assets/sass/styles/reset';
+@use './assets/sass/styles/text';
 
 :root {
   font-family: $text;
   color: $secondary;
   background-color: $primary;
+  padding: 0 5%;
 }
 
-body {
+section {
+  padding: 55px 0;
+}
+
+h1 {
+  span {
+    color: $accent;
+  }
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 1px dotted $alternate;
+}
+
+p {
+  color: $alternate;
+}
+
+.primary-button {
   @include center-contents;
 
-  flex-direction: column;
-  height: 100vh;
-}
-
-#changing-element,
-#change-button {
-  border-radius: 5px;
-}
-
-#changing-element {
-  @include center-contents;
-
-  background-color: $secondary;
-  font-size: 2rem;
+  cursor: pointer;
+  background-color: $accent;
+  font-family: $text;
+  font-size: 1.5rem;
   font-weight: $semi-bold;
   color: $primary;
-  width: 25%;
-  min-width: 200px;
-  aspect-ratio: 1;
+  width: fit-content;
+  padding: 16px 20px;
+  margin-top: 40px;
+  border: 2px solid $accent;
+  border-radius: 3px;
+  transition: background-color 0.2s;
 }
 
-#change-button {
-  font-size: 1.5rem;
+.primary-button:hover {
+  background-color: $primary;
   color: $secondary;
-  padding: 20px 12px;
-  margin-top: 20px;
-  border: 2px solid $accent;
-  transition: background-color 0.2s;
+}
+
+.primary-button:active {
+  background-color: $secondary;
+  color: $primary;
+  border-color: $secondary;
+}
+
+#hello {
+  img {
+    display: block;
+    mask-image: linear-gradient(to bottom, $primary 80%, transparent);
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 1;
+    margin: auto;
+    margin-bottom: 20px;
+  }
 }
 
 #change-button:hover {
