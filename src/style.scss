@@ -1,4 +1,6 @@
 @use './assets/sass/abstracts/' as *;
+@use './assets/sass/styles/buttons';
+@use './assets/sass/styles/project-cards';
 @use './assets/sass/styles/reset';
 @use './assets/sass/styles/text';
 
@@ -27,34 +29,6 @@ h2 {
 
 p {
   color: $alternate;
-}
-
-.primary-button {
-  @include center-contents;
-
-  cursor: pointer;
-  background-color: $accent;
-  font-family: $text;
-  font-size: 1.5rem;
-  font-weight: $semi-bold;
-  color: $primary;
-  width: fit-content;
-  padding: 16px 20px;
-  margin-top: 40px;
-  border: 2px solid $accent;
-  border-radius: 3px;
-  transition: background-color 0.2s;
-}
-
-.primary-button:hover {
-  background-color: $primary;
-  color: $secondary;
-}
-
-.primary-button:active {
-  background-color: $secondary;
-  color: $primary;
-  border-color: $secondary;
 }
 
 #hello {
