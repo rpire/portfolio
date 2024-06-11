@@ -94,7 +94,7 @@ const generateProjectCard = (project: Project): HTMLLIElement => {
   return card;
 };
 
-const renderProjectCards = (element: HTMLElement, projects: Project[]) =>
+const renderProjectCards = (element: HTMLElement, projects: Project[]): void =>
   projects.forEach((project) => element.appendChild(generateProjectCard(project)));
 
 export default renderProjectCards;
