@@ -42,13 +42,3 @@ p {
     margin-bottom: 20px;
   }
 }
-
-#change-button:hover {
-  background-color: $accent;
-  color: $primary;
-}
-
-#change-button:active {
-  background-color: $secondary;
-  border-color: $secondary;
-}
