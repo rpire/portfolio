@@ -1,0 +1,42 @@
+@use '../abstracts' as *;
+
+.carousel-frame {
+  overflow-x: hidden;
+  background-color: $quaternary;
+  width: 100vw;
+  margin-top: 30px;
+  margin-left: -5vw;
+  border-bottom: 1px dashed $alternate;
+}
+
+#carousel {
+  @include center-contents(false);
+
+  gap: 40px;
+  padding: 12px 20px;
+  width: fit-content;
+  min-height: 100px;
+  animation: goround 60s linear infinite;
+
+  img {
+    fill: $alternate;
+    width: 50px;
+  }
+}
+
+.tech-separator {
+  background-color: $accent;
+  width: 5px;
+  aspect-ratio: 1;
+  transform: rotate(45deg);
+}
+
+@keyframes goround {
+  from {
+    translate: 0 0;
+  }
+
+  to {
+    translate: -50% 0;
+  }
+}
