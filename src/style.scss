@@ -1,6 +1,7 @@
 @use './assets/sass/abstracts/' as *;
 @use './assets/sass/styles/about-section';
 @use './assets/sass/styles/buttons';
+@use './assets/sass/styles/carousel';
 @use './assets/sass/styles/project-cards';
 @use './assets/sass/styles/reset';
 @use './assets/sass/styles/text';
@@ -10,6 +11,10 @@
   color: $secondary;
   background-color: $primary;
   padding: 0 5%;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 section {
