@@ -9,7 +9,10 @@
   font-family: $text;
   padding: 16px 20px;
   border-radius: 3px;
-  transition: background-color border-color 0.2s;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s;
 }
 
 .primary-button,

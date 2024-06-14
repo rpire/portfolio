@@ -1,5 +1,7 @@
 @use './assets/sass/abstracts/' as *;
+@use './assets/sass/styles/about-section';
 @use './assets/sass/styles/buttons';
+@use './assets/sass/styles/carousel';
 @use './assets/sass/styles/project-cards';
 @use './assets/sass/styles/reset';
 @use './assets/sass/styles/text';
@@ -9,6 +11,10 @@
   color: $secondary;
   background-color: $primary;
   padding: 0 5%;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 section {
@@ -23,8 +29,8 @@ h1 {
 
 h2 {
   text-align: center;
-  padding-bottom: 16px;
-  border-bottom: 1px dotted $alternate;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed $alternate;
 }
 
 p {
@@ -41,14 +47,4 @@ p {
     margin: auto;
     margin-bottom: 20px;
   }
-}
-
-#change-button:hover {
-  background-color: $accent;
-  color: $primary;
-}
-
-#change-button:active {
-  background-color: $secondary;
-  border-color: $secondary;
 }

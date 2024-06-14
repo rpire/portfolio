@@ -1,0 +1,55 @@
+@use '../abstracts/' as *;
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.about-info {
+  p {
+    margin-bottom: 40px;
+  }
+}
+
+.about-grid {
+  display: grid;
+  row-gap: 30px;
+}
+
+.about-list-container {
+  background-repeat: no-repeat;
+  background-position: bottom 20px right;
+  border-bottom: 1px dashed $alternate;
+  padding-bottom: 20px;
+
+  h3 {
+    font-weight: $medium;
+    color: $accent;
+  }
+}
+
+.skills {
+  background-image: url('skills.svg');
+}
+
+.stack {
+  background-image: url('stack.svg');
+}
+
+.tools {
+  background-image: url('tools.svg');
+  border: none;
+}
+
+.deco {
+  display: none;
+}
+
+.about-list {
+  li {
+    font-size: 1.25rem;
+    color: $alternate;
+    margin-bottom: 5px;
+  }
+}
