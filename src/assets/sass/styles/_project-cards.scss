@@ -10,6 +10,10 @@
   padding-bottom: 20px;
 }
 
+.project-card:last-child {
+  padding-bottom: 0;
+}
+
 .project-image {
   display: block;
   aspect-ratio: 16 / 9;
