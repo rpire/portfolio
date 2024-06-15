@@ -2,7 +2,7 @@
 @use './assets/sass/styles/about-section';
 @use './assets/sass/styles/buttons';
 @use './assets/sass/styles/carousel';
-@use './assets/sass/styles/contact-section';
+@use './assets/sass/styles/form';
 @use './assets/sass/styles/project-cards';
 @use './assets/sass/styles/reset';
 @use './assets/sass/styles/text';
@@ -34,7 +34,8 @@ h2 {
   border-bottom: 1px dashed $alternate;
 }
 
-p {
+p,
+label {
   color: $alternate;
 }
 
