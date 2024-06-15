@@ -1,0 +1,55 @@
+@use '../abstracts' as *;
+
+form {
+  margin-top: 30px;
+}
+
+.input-join,
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  gap: 6px;
+  margin-bottom: 20px;
+
+  small {
+    text-align: end;
+    color: $tertiary;
+  }
+}
+
+input,
+textarea,
+input::placeholder,
+textarea::placeholder {
+  font-family: $text;
+  font-size: 1.25rem;
+}
+
+input,
+textarea {
+  background-color: $quaternary;
+  color: $secondary;
+  padding: 16px 20px;
+  border: 1px solid $tertiary;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  background-color: $quinary;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: $tertiary;
+}
