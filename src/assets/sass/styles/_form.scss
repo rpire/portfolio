@@ -1,6 +1,8 @@
 @use '../abstracts' as *;
 
 form {
+  @include global-margin;
+
   margin-top: 30px;
 }
 
