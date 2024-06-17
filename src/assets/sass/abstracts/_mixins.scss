@@ -10,6 +10,11 @@
   }
 }
 
+@mixin global-margin {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 @mixin media($width) {
   @media only screen and (width > $width) {
     @content;
