@@ -11,7 +11,6 @@
   font-family: $text;
   color: $secondary;
   background-color: $primary;
-  padding: 0 5%;
 }
 
 body {
@@ -40,6 +39,8 @@ label {
 }
 
 #hello {
+  @include global-margin;
+
   img {
     display: block;
     mask-image: linear-gradient(to bottom, $primary 80%, transparent);
@@ -48,5 +49,11 @@ label {
     aspect-ratio: 1;
     margin: auto;
     margin-bottom: 20px;
+  }
+}
+
+#contact {
+  p {
+    @include global-margin;
   }
 }

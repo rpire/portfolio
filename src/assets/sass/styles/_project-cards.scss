@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
 
+#project-cards {
+  @include global-margin;
+}
+
 .project-card,
 .project-image {
   width: 100%;
