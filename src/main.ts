@@ -1,8 +1,17 @@
+import { hideNavbar, showNavbar } from './helpers/navbar';
 import populateCarousel from './helpers/populateCarousel';
 import projects from './data/projects';
 import renderProjectCards from './helpers/renderProjects';
 import technologies from './data/technologies';
 import './style.scss';
+
+document.getElementById('show')?.addEventListener('click', (): void => showNavbar());
+
+document.getElementById('hide')?.addEventListener('click', (): void => hideNavbar());
+
+[...document.getElementsByClassName('navlink')].forEach((navlink) =>
+  navlink.addEventListener('click', (): void => hideNavbar()),
+);
 
 const projectCardsContainer = document.getElementById('project-cards');
 
