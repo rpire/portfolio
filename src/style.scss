@@ -12,6 +12,11 @@
   font-family: $text;
   color: $secondary;
   background-color: $primary;
+  background-image: url('/deco-a.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 75px;
+  scroll-behavior: smooth;
 }
 
 section {
