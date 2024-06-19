@@ -2,7 +2,8 @@
 
 .primary-button,
 .secondary-button,
-.github-button {
+.github-button,
+.social-link {
   @include center-contents;
 
   cursor: pointer;
@@ -21,10 +22,15 @@
 }
 
 .secondary-button,
-.github-button {
-  font-size: 1.25rem;
+.github-button,
+.social-link {
   font-weight: $medium;
   color: $secondary;
+}
+
+.secondary-button,
+.github-button {
+  font-size: 1.25rem;
 }
 
 .primary-button {
@@ -49,6 +55,11 @@
   }
 }
 
+.social-link {
+  background-color: $quaternary;
+  font-size: 2rem;
+}
+
 .primary-button:hover {
   background-color: transparent;
   color: $secondary;
@@ -63,6 +74,10 @@
   background-color: $tertiary;
 }
 
+.social-link:hover {
+  background-color: $quinary;
+}
+
 .primary-button:active,
 .secondary-button:active {
   background-color: $secondary;
@@ -72,4 +87,8 @@
 
 .github-button:active {
   background-color: $quaternary;
+}
+
+.social-link:active {
+  background-color: $tertiary;
 }
