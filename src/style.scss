@@ -4,6 +4,7 @@
 @use './assets/sass/styles/carousel';
 @use './assets/sass/styles/footer';
 @use './assets/sass/styles/form';
+@use './assets/sass/styles/hello-section';
 @use './assets/sass/styles/navigation';
 @use './assets/sass/styles/project-cards';
 @use './assets/sass/styles/reset';
@@ -13,11 +14,16 @@
   font-family: $text;
   color: $secondary;
   background-color: $primary;
+  scroll-behavior: smooth;
+}
+
+body {
   background-image: url('/deco-a.svg');
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 75px;
-  scroll-behavior: smooth;
+  max-width: 1480px;
+  margin: 0 auto;
 }
 
 section {
@@ -41,22 +47,20 @@ label {
   color: $alternate;
 }
 
-#hello {
-  @include global-margin;
-
-  img {
-    display: block;
-    mask-image: linear-gradient(to bottom, $primary 80%, transparent);
-    width: 100%;
-    max-width: 550px;
-    aspect-ratio: 1;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-}
-
 #contact {
   p {
     @include global-margin;
+  }
+}
+
+@include media(768px) {
+  section {
+    padding: 80px 0;
+  }
+}
+
+@include media(1024px) {
+  section {
+    padding: 100px 0;
   }
 }
