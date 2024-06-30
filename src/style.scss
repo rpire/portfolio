@@ -13,11 +13,16 @@
   font-family: $text;
   color: $secondary;
   background-color: $primary;
+  scroll-behavior: smooth;
+}
+
+body {
   background-image: url('/deco-a.svg');
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 75px;
-  scroll-behavior: smooth;
+  max-width: 1480px;
+  margin: 0 auto;
 }
 
 section {
