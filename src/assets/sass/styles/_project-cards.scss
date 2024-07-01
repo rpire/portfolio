@@ -62,3 +62,17 @@
   flex-direction: column;
   gap: 12px;
 }
+
+@include media(600px) {
+  .project-buttons {
+    flex-direction: row;
+
+    .github-button {
+      width: 35%;
+    }
+
+    .secondary-button {
+      width: 65%;
+    }
+  }
+}
