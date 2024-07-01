@@ -10,12 +10,11 @@
 }
 
 .project-card {
-  margin-top: 50px;
-  padding-bottom: 20px;
+  margin-top: 80px;
 }
 
-.project-card:last-child {
-  padding-bottom: 0;
+.project-card:first-child {
+  margin-top: 50px;
 }
 
 .project-image {
