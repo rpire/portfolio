@@ -10,12 +10,11 @@
 }
 
 .project-card {
-  margin-top: 50px;
-  padding-bottom: 20px;
+  margin-top: 80px;
 }
 
-.project-card:last-child {
-  padding-bottom: 0;
+.project-card:first-child {
+  margin-top: 50px;
 }
 
 .project-image {
@@ -62,4 +61,66 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+@include media(600px) {
+  .project-buttons {
+    flex-direction: row;
+
+    .github-button {
+      width: 35%;
+    }
+
+    .secondary-button {
+      width: 65%;
+    }
+  }
+}
+
+@include media(768px) {
+  #projects h2 {
+    margin-bottom: 0;
+  }
+
+  .project-card {
+    border: 1px dashed $alternate;
+    padding: 50px 7.5%;
+  }
+
+  .project-card:first-child {
+    margin-top: 0;
+    border-top: none;
+  }
+}
+
+@include media(1024px) {
+  #projects h2 {
+    text-align: left;
+    padding-left: 5%;
+  }
+
+  .project-card {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .project-info-container {
+    @include center-contents;
+
+    flex-direction: row-reverse;
+    gap: 7.5%;
+  }
+
+  .project-image-frame {
+    width: 60%;
+  }
+
+  .project-info {
+    width: 40%;
+  }
+
+  .project-buttons {
+    width: 55.5%;
+    margin-left: auto;
+  }
 }

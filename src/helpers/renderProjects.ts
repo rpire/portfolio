@@ -16,6 +16,7 @@ const generateProjectCard = (project: Project): HTMLLIElement => {
   card.classList.add('project-card');
 
   const container = document.createElement('div');
+  container.classList.add('project-info-container');
 
   const imageFrame = document.createElement('div');
   imageFrame.classList.add('project-image-frame');
