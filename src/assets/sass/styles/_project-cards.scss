@@ -76,3 +76,19 @@
     }
   }
 }
+
+@include media(768px) {
+  #projects h2 {
+    margin-bottom: 0;
+  }
+
+  .project-card {
+    border: 1px dashed $alternate;
+    padding: 50px 7.5%;
+  }
+
+  .project-card:first-child {
+    margin-top: 0;
+    border-top: none;
+  }
+}
