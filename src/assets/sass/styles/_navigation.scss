@@ -96,3 +96,51 @@
     padding-bottom: 20px;
   }
 }
+
+@include media(768px) {
+  .menu-button {
+    display: none;
+  }
+
+  .navbar,
+  .navlinks {
+    flex-direction: row;
+  }
+
+  .navbar {
+    visibility: visible;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    background-image: none;
+    height: 60px;
+    padding: 12px 5%;
+    border-bottom: 1px dashed $alternate;
+    transition: transform 0s;
+
+    img {
+      width: auto;
+      max-height: 100%;
+    }
+  }
+
+  .nav-drop {
+    transform: none;
+  }
+
+  .navlinks {
+    justify-content: space-between;
+    width: 50%;
+    padding-bottom: 0;
+  }
+
+  .navlink {
+    font-size: 1.5rem;
+  }
+}
+
+@include media(1024px) {
+  .navbar {
+    height: 75px;
+  }
+}
