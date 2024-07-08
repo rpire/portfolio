@@ -8,7 +8,7 @@
 .menu-button,
 .navlink {
   color: $alternate;
-  transition: 0.2s;
+  transition: color 0.2s;
 }
 
 .menu-button {
@@ -46,7 +46,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(15px);
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 30px 20px 5px;
   z-index: 99;
@@ -71,6 +71,7 @@
 .navlinks {
   justify-content: space-evenly;
   height: 70%;
+  padding-bottom: 50px;
 }
 
 .navlink {
@@ -86,8 +87,60 @@
   text-shadow: 1px 1px 2px $secondary;
 }
 
-@media only screen and (height <= 512px) {
+@media only screen and (orientation: landscape) {
   .navbar {
     background-size: auto;
+  }
+
+  .navlinks {
+    padding-bottom: 20px;
+  }
+}
+
+@include media(768px) {
+  .menu-button {
+    display: none;
+  }
+
+  .navbar,
+  .navlinks {
+    flex-direction: row;
+  }
+
+  .navbar {
+    visibility: visible;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    background-image: none;
+    height: 60px;
+    padding: 12px 5%;
+    border-bottom: 1px dashed $alternate;
+    transition: transform 0s;
+
+    img {
+      width: auto;
+      max-height: 100%;
+    }
+  }
+
+  .nav-drop {
+    transform: none;
+  }
+
+  .navlinks {
+    justify-content: space-between;
+    width: 50%;
+    padding-bottom: 0;
+  }
+
+  .navlink {
+    font-size: 1.5rem;
+  }
+}
+
+@include media(1024px) {
+  .navbar {
+    height: 75px;
   }
 }
