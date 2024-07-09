@@ -55,3 +55,80 @@
     margin-bottom: 5px;
   }
 }
+
+@include media(768px) {
+  .about-info {
+    padding-top: 20px;
+
+    a {
+      max-width: 350px;
+    }
+  }
+
+  .about-grid {
+    grid-template-columns: calc(50% - 6px) calc(50% + 6px);
+    grid-template-rows: 300px 300px;
+    gap: 0;
+  }
+
+  .about-list-container,
+  .deco {
+    background-position: bottom 20px right 20px;
+  }
+
+  .about-list-container {
+    padding: 12px 0;
+    border: none;
+  }
+
+  .skills {
+    border-right: 1px dashed $alternate;
+  }
+
+  .stack {
+    border-bottom: 1px dashed $alternate;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .tools {
+    border-top: 1px dashed $alternate;
+  }
+
+  .deco {
+    display: block;
+    background-image: url('/simple-rpire-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 102px;
+    border-left: 1px dashed $alternate;
+  }
+}
+
+@include media(1024px) {
+  #about h2 {
+    margin-bottom: 0;
+  }
+
+  .about-container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .about-info {
+    width: 40%;
+    padding: 20px 2.5%;
+  }
+
+  .about-grid {
+    grid-template-columns: calc(50% - 10px) calc(50% + 10px);
+    width: 60%;
+    border-right: 1px dashed $alternate;
+  }
+
+  .stack {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
