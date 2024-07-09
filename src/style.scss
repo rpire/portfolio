@@ -48,12 +48,6 @@ label {
   color: $alternate;
 }
 
-#contact {
-  p {
-    @include global-margin;
-  }
-}
-
 @include media(768px) {
   body {
     background-image: none;

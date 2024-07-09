@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
-form {
+#contact p,
+.contact-form {
   @include global-margin;
 
   margin-top: 30px;
@@ -54,4 +55,31 @@ textarea:focus {
 input::placeholder,
 textarea::placeholder {
   color: $tertiary;
+}
+
+@include media(768px) {
+  .input-join {
+    flex-direction: row;
+    gap: 20px;
+
+    label {
+      width: 50%;
+    }
+  }
+}
+
+@include media(1024px) {
+  #contact h2 {
+    margin-bottom: 50px;
+  }
+
+  .contact-form,
+  #contact p {
+    max-width: 900px;
+    margin: 30px auto 0;
+
+    textarea {
+      height: 250px;
+    }
+  }
 }
