@@ -16,3 +16,21 @@ footer {
   justify-content: space-evenly;
   width: 100%;
 }
+
+@include media(768px) {
+  footer {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-bottom: 30px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .social-links {
+    justify-content: right;
+    gap: 50px;
+    width: 40%;
+  }
+}
