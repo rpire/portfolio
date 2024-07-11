@@ -3,6 +3,7 @@ import populateCarousel from './helpers/populateCarousel';
 import projects from './data/projects';
 import renderProjectCards from './helpers/renderProjects';
 import technologies from './data/technologies';
+import updateMessageCharCount from './helpers/charCounter';
 import './style.scss';
 
 document.getElementById('show')?.addEventListener('click', (): void => showNavbar());
@@ -20,3 +21,5 @@ if (projectCardsContainer) renderProjectCards(projectCardsContainer, projects);
 const carousel = document.getElementById('carousel');
 
 if (carousel) populateCarousel(carousel, technologies);
+
+document.getElementById('message')?.addEventListener('input', updateMessageCharCount);
