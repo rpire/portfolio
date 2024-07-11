@@ -1,11 +1,21 @@
-const displayCount = (count: number): void => {
+const displayCount = (count: number, message: HTMLTextAreaElement): void => {
   const display = document.getElementById('char-count');
 
-  count > 600 ? display?.classList.add('error') : display?.classList.remove('error');
+  if (count > 600) {
+    display?.classList.add('error');
+    message.classList.add('border-error');
+  } else {
+    display?.classList.remove('error');
+    message.classList.remove('border-error');
+  }
 
   if (display) display.innerText = `${count} / 600`;
 };
 
-const updateMessageCharCount = (event: Event): void => displayCount((event.target as HTMLTextAreaElement).value.length);
+const updateMessageCharCount = (event: Event): void => {
+  const message = event.target as HTMLTextAreaElement;
+
+  displayCount(message.value.length, message);
+};
 
 export default updateMessageCharCount;
