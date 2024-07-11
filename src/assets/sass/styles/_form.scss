@@ -20,6 +20,7 @@ label {
   small {
     text-align: end;
     color: $tertiary;
+    transition: color 0.2s;
   }
 }
 
@@ -39,7 +40,9 @@ textarea {
   border: 1px solid $tertiary;
   border-radius: 3px;
   outline: none;
-  transition: background-color 0.2s;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
 }
 
 textarea {
@@ -55,6 +58,14 @@ textarea:focus {
 input::placeholder,
 textarea::placeholder {
   color: $tertiary;
+}
+
+.error {
+  color: $error;
+}
+
+.border-error {
+  border-color: $error;
 }
 
 @include media(768px) {
