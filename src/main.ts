@@ -1,3 +1,4 @@
+import handleSubmit, { isValidEmail, isValidMessage, isValidName } from './helpers/handleSubmit';
 import { hideNavbar, showNavbar } from './helpers/navbar';
 import populateCarousel from './helpers/populateCarousel';
 import projects from './data/projects';
@@ -23,3 +24,11 @@ const carousel = document.getElementById('carousel');
 if (carousel) populateCarousel(carousel, technologies);
 
 document.getElementById('message')?.addEventListener('input', updateMessageCharCount);
+
+document.getElementById('name')?.addEventListener('blur', (event) => isValidName(event.target as HTMLInputElement));
+document.getElementById('email')?.addEventListener('blur', (event) => isValidEmail(event.target as HTMLInputElement));
+document
+  .getElementById('message')
+  ?.addEventListener('blur', (event) => isValidMessage(event.target as HTMLTextAreaElement));
+
+document.getElementById('contact-form')?.addEventListener('submit', handleSubmit);
