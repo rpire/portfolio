@@ -68,6 +68,15 @@ textarea::placeholder {
   border-color: $error;
 }
 
+.response {
+  font-size: 1.5rem;
+  text-align: center;
+
+  a {
+    color: $accent;
+  }
+}
+
 @include media(768px) {
   .input-join {
     flex-direction: row;
