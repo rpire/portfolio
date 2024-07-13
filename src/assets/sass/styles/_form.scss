@@ -34,7 +34,7 @@ textarea::placeholder {
 
 input,
 textarea {
-  background-color: $quaternary;
+  background-color: color-mix(in srgb, $quaternary 90%, transparent);
   color: $secondary;
   padding: 16px 20px;
   border: 1px solid $tertiary;
@@ -78,6 +78,13 @@ textarea::placeholder {
 }
 
 @include media(768px) {
+  #contact {
+    background-image: url('/form-deco.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom 100px;
+  }
+
   .input-join {
     flex-direction: row;
     gap: 20px;
