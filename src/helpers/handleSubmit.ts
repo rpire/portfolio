@@ -158,8 +158,11 @@ const handleSubmit = (event: Event): void => {
   const name = document.getElementById('name') as HTMLInputElement;
   const email = document.getElementById('email') as HTMLInputElement;
   const message = document.getElementById('message') as HTMLTextAreaElement;
+  const button = document.getElementById('submit') as HTMLButtonElement;
 
   if (areFormInputsValid(name, email, message)) {
+    button.disabled = true;
+
     fetch(import.meta.env.VITE_MAILER_ENDPOINT, {
       method: 'POST',
       headers: {
