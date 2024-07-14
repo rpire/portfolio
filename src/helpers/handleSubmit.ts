@@ -12,7 +12,7 @@ export const isValidName = (nameInput: HTMLInputElement): boolean => {
   if (validatePresence(nameValue)) {
     nameError.innerText = "can't be blank";
   } else if (validateMaxLength(nameValue, 50)) {
-    nameError.innerText = 'is too long (max 50)';
+    nameError.innerText = 'is too long (max. 50)';
   } else {
     nameError.innerText = '';
     nameInput.classList.remove('border-error');
@@ -34,7 +34,7 @@ export const isValidEmail = (emailInput: HTMLInputElement): boolean => {
   } else if (validateFormat(emailValue, /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/)) {
     emailError.innerText = 'is not valid';
   } else if (validateMaxLength(emailValue, 150)) {
-    emailError.innerText = 'is too long (max 150)';
+    emailError.innerText = 'is too long (max. 150)';
   } else {
     emailError.innerText = '';
     emailInput.classList.remove('border-error');
@@ -52,9 +52,9 @@ export const isValidMessage = (message: HTMLTextAreaElement): boolean => {
   const messageError = document.getElementById('message-error') as HTMLElement;
 
   if (validateMinLength(messageValue, 20)) {
-    messageError.innerText = 'is too short (min 20)';
+    messageError.innerText = 'is too short (min. 20)';
   } else if (validateMaxLength(messageValue, 600)) {
-    messageError.innerText = 'is too long (max 600)';
+    messageError.innerText = 'is too long (max. 600)';
   } else {
     messageError.innerText = '';
     message.classList.remove('border-error');
