@@ -79,6 +79,7 @@ const generateSuccessMessage = (section: HTMLElement): void => {
   section.innerHTML = '';
 
   const title = document.createElement('h2');
+  title.style.marginBottom = '90px';
   const titleText = document.createTextNode('Received');
 
   const paragraph = document.createElement('p');
@@ -107,12 +108,13 @@ const generateErrorMessage = (section: HTMLElement): void => {
   section.innerHTML = '';
 
   const title = document.createElement('h2');
+  title.style.marginBottom = '90px';
   const titleText = document.createTextNode('Whoops');
 
   const paragraph = document.createElement('p');
   paragraph.classList.add('response');
   const paragraphText = document.createTextNode(
-    'It seems like something went wrong when submitting the form... Please wait couple minutes before trying again.',
+    'It seems like something went wrong when submitting the form... Please wait a couple of minutes before trying again.',
   );
 
   const mailMe = document.createElement('p');
@@ -127,7 +129,7 @@ const generateErrorMessage = (section: HTMLElement): void => {
   const button = document.createElement('button');
   button.type = 'button';
   button.classList.add('primary-button');
-  button.style.margin = '50px auto';
+  button.style.margin = '80px auto';
   button.addEventListener('click', () => location.reload());
   const buttonText = document.createTextNode('Retry');
 
