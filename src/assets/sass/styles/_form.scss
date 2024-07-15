@@ -20,6 +20,7 @@ label {
   small {
     text-align: end;
     color: $tertiary;
+    transition: color 0.2s;
   }
 }
 
@@ -33,13 +34,15 @@ textarea::placeholder {
 
 input,
 textarea {
-  background-color: $quaternary;
+  background-color: color-mix(in srgb, $quaternary 90%, transparent);
   color: $secondary;
   padding: 16px 20px;
   border: 1px solid $tertiary;
   border-radius: 3px;
   outline: none;
-  transition: background-color 0.2s;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
 }
 
 textarea {
@@ -57,7 +60,31 @@ textarea::placeholder {
   color: $tertiary;
 }
 
+.error {
+  color: $error;
+}
+
+.border-error {
+  border-color: $error;
+}
+
+.response {
+  font-size: 1.5rem;
+  text-align: center;
+
+  a {
+    color: $accent;
+  }
+}
+
 @include media(768px) {
+  #contact {
+    background-image: url('/form-deco.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom 100px;
+  }
+
   .input-join {
     flex-direction: row;
     gap: 20px;

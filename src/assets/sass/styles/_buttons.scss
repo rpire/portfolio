@@ -92,3 +92,9 @@
 .social-link:active {
   background-color: $tertiary;
 }
+
+.primary-button:disabled {
+  background-color: $quinary;
+  color: $quaternary;
+  border-color: $quaternary;
+}
