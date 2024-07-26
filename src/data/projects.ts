@@ -8,7 +8,7 @@ export interface Project {
   imageURL: string;
   description: string;
   tags: string[];
-  githubURL: string;
+  githubURL?: string;
   liveURL: string;
 }
 
@@ -20,7 +20,6 @@ const projects: Project[] = [
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, necessitatibus ea delectus, sit repellendus facilis soluta odit itaque eos non eum temporibus labore, enim molestiae consequatur iusto! Hic, fuga debitis?',
     tags: ['HTML', 'CSS', 'JavaScript', 'Vite', 'Netlify', 'AWS', 'EC2'],
-    githubURL: '#',
     liveURL: '#',
   },
   {
