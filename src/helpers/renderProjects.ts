@@ -11,6 +11,22 @@ const generateProjectTag = (tagValue: string): HTMLLIElement => {
   return tag;
 };
 
+const generateGithubButton = (url: string): HTMLAnchorElement => {
+  const githubButton = document.createElement('a');
+  githubButton.href = url;
+  githubButton.classList.add('github-button');
+
+  const githubIcon = document.createElement('i');
+  githubIcon.classList.add('bx', 'bxl-github');
+
+  const githubButtonText = document.createTextNode('GitHub');
+
+  githubButton.appendChild(githubIcon);
+  githubButton.appendChild(githubButtonText);
+
+  return githubButton;
+};
+
 const generateProjectCard = (project: Project): HTMLLIElement => {
   const card = document.createElement('li');
   card.classList.add('project-card');
@@ -48,15 +64,6 @@ const generateProjectCard = (project: Project): HTMLLIElement => {
   const buttons = document.createElement('div');
   buttons.classList.add('project-buttons');
 
-  const githubButton = document.createElement('a');
-  githubButton.href = project.githubURL;
-  githubButton.classList.add('github-button');
-
-  const githubIcon = document.createElement('i');
-  githubIcon.classList.add('bx', 'bxl-github');
-
-  const githubButtonText = document.createTextNode('GitHub');
-
   const liveButton = document.createElement('a');
   liveButton.href = project.liveURL;
   liveButton.classList.add('secondary-button');
@@ -81,12 +88,9 @@ const generateProjectCard = (project: Project): HTMLLIElement => {
   container.appendChild(imageFrame);
   container.appendChild(information);
 
-  githubButton.appendChild(githubIcon);
-  githubButton.appendChild(githubButtonText);
-
   liveButton.appendChild(liveButtonText);
 
-  buttons.appendChild(githubButton);
+  if (project.githubURL) buttons.appendChild(generateGithubButton(project.githubURL));
   buttons.appendChild(liveButton);
 
   card.appendChild(container);
