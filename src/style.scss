@@ -33,6 +33,8 @@ section {
 
 h1 {
   span {
+    font-family: $code;
+    font-weight: $regular;
     color: $accent;
   }
 }
