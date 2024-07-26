@@ -1,3 +1,7 @@
+import borluvDevelopments from '../assets/images/projects/borluv-developments.png';
+import mathMagicians from '../assets/images/projects/math-magicians.png';
+import paytrack from '../assets/images/projects/paytrack.png';
+
 export interface Project {
   id: string;
   title: string;
@@ -11,8 +15,8 @@ export interface Project {
 const projects: Project[] = [
   {
     id: '01',
-    title: 'Project Name',
-    imageURL: 'https://img.freepik.com/premium-photo/laptop-with-code-programming_587448-2809.jpg',
+    title: 'Borluv Developments',
+    imageURL: borluvDevelopments,
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, necessitatibus ea delectus, sit repellendus facilis soluta odit itaque eos non eum temporibus labore, enim molestiae consequatur iusto! Hic, fuga debitis?',
     tags: ['HTML', 'CSS', 'JavaScript', 'Vite', 'Netlify', 'AWS', 'EC2'],
@@ -21,8 +25,8 @@ const projects: Project[] = [
   },
   {
     id: '02',
-    title: 'Other Project',
-    imageURL: 'https://img.freepik.com/premium-photo/laptop-with-code-programming_587448-2809.jpg',
+    title: 'Math Magicians',
+    imageURL: mathMagicians,
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, necessitatibus ea delectus, sit repellendus facilis soluta odit itaque eos non eum temporibus labore, enim molestiae consequatur iusto! Hic, fuga debitis?',
     tags: ['HTML', 'Sass', 'TypeScript', 'Vite', 'Vitest', 'AWS', 'EC2', 'RTK'],
@@ -31,8 +35,8 @@ const projects: Project[] = [
   },
   {
     id: '03',
-    title: 'Last Project',
-    imageURL: 'https://img.freepik.com/premium-photo/laptop-with-code-programming_587448-2809.jpg',
+    title: 'Paytrack',
+    imageURL: paytrack,
     description:
       'This description will be a little different since I want to test some stuff, I will just write some random stuff for now and it should work just fine.',
     tags: ['Ruby', 'Ruby on Rails', 'Sass', 'PostgreSQL', 'Heroku', 'AWS S3'],
