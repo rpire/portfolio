@@ -11,7 +11,6 @@ import html from '../assets/images/tech-icons/html.svg';
 import javascript from '../assets/images/tech-icons/javascript.svg';
 import jest from '../assets/images/tech-icons/jest.svg';
 import mongodb from '../assets/images/tech-icons/mongodb.svg';
-import nestjs from '../assets/images/tech-icons/nestjs.svg';
 import nextdotjs from '../assets/images/tech-icons/nextdotjs.svg';
 import nodedotjs from '../assets/images/tech-icons/nodedotjs.svg';
 import npm from '../assets/images/tech-icons/npm.svg';
@@ -42,7 +41,6 @@ const technologies: string[] = [
   javascript,
   jest,
   mongodb,
-  nestjs,
   nextdotjs,
   nodedotjs,
   npm,

@@ -68,11 +68,12 @@
     flex-direction: row;
 
     .github-button {
-      width: 35%;
+      flex-basis: 35%;
     }
 
     .secondary-button {
-      width: 65%;
+      flex-basis: 65%;
+      flex-grow: 1;
     }
   }
 }

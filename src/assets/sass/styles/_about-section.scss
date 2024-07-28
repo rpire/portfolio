@@ -66,8 +66,7 @@
   }
 
   .about-grid {
-    grid-template-columns: calc(50% - 6px) calc(50% + 6px);
-    grid-template-rows: 300px 300px;
+    grid-template: 1fr 1fr / calc(50% - 6px) calc(50% + 6px);
     gap: 0;
   }
 

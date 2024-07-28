@@ -1,43 +1,46 @@
+import borluvDevelopments from '../assets/images/projects/borluv-developments.png';
+import mathMagicians from '../assets/images/projects/math-magicians.png';
+import paytrack from '../assets/images/projects/paytrack.png';
+
 export interface Project {
   id: string;
   title: string;
   imageURL: string;
   description: string;
   tags: string[];
-  githubURL: string;
+  githubURL?: string;
   liveURL: string;
 }
 
 const projects: Project[] = [
   {
     id: '01',
-    title: 'Project Name',
-    imageURL: 'https://img.freepik.com/premium-photo/laptop-with-code-programming_587448-2809.jpg',
+    title: 'Borluv Developments',
+    imageURL: borluvDevelopments,
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, necessitatibus ea delectus, sit repellendus facilis soluta odit itaque eos non eum temporibus labore, enim molestiae consequatur iusto! Hic, fuga debitis?',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Vite', 'Netlify', 'AWS', 'EC2'],
-    githubURL: '#',
-    liveURL: '#',
+      "A modern, fully responsive React website built with TypeScript and Sass. The site fetches property listings and opportunities directly from Borluv's database, providing clients with information on real estate offerings. Explore properties, view details, and discover investment opportunities effortlessly",
+    tags: ['React JS', 'Sass', 'TypeScript', 'Vite', 'React Router'],
+    liveURL: 'https://borluv.com/',
   },
   {
     id: '02',
-    title: 'Other Project',
-    imageURL: 'https://img.freepik.com/premium-photo/laptop-with-code-programming_587448-2809.jpg',
+    title: 'Math Magicians',
+    imageURL: mathMagicians,
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, necessitatibus ea delectus, sit repellendus facilis soluta odit itaque eos non eum temporibus labore, enim molestiae consequatur iusto! Hic, fuga debitis?',
-    tags: ['HTML', 'Sass', 'TypeScript', 'Vite', 'Vitest', 'AWS', 'EC2', 'RTK'],
-    githubURL: '#',
-    liveURL: '#',
+      'A single-page application (SPA) calculator developed using React. The calculator features a user-friendly interface for performing basic arithmetic operations. Tested with Jest and React Testing Library to ensure accuracy and reliability.',
+    tags: ['React JS', 'CSS', 'Jest', 'React Router'],
+    githubURL: 'https://github.com/rpire/math-magicians/',
+    liveURL: 'https://rpire.github.io/math-magicians/',
   },
   {
     id: '03',
-    title: 'Last Project',
-    imageURL: 'https://img.freepik.com/premium-photo/laptop-with-code-programming_587448-2809.jpg',
+    title: 'Paytrack',
+    imageURL: paytrack,
     description:
-      'This description will be a little different since I want to test some stuff, I will just write some random stuff for now and it should work just fine.',
-    tags: ['Ruby', 'Ruby on Rails', 'Sass', 'PostgreSQL', 'Heroku', 'AWS S3'],
-    githubURL: '#',
-    liveURL: '#',
+      'Paytrack is a light Ruby on Rails application designed for efficient budget management. It allows users to track their expenses by associating transactions with specific categories. Easily visualize spending patterns and analyze where your money goes',
+    tags: ['Ruby', 'Ruby on Rails', 'Sass', 'PostgreSQL', 'Heroku'],
+    githubURL: 'https://github.com/rpire/budget-app/',
+    liveURL: 'https://rpire-paytracker.herokuapp.com/',
   },
 ];
 
