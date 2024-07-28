@@ -14,6 +14,8 @@ const generateProjectTag = (tagValue: string): HTMLLIElement => {
 const generateGithubButton = (url: string): HTMLAnchorElement => {
   const githubButton = document.createElement('a');
   githubButton.href = url;
+  githubButton.rel = 'noreferrer';
+  githubButton.target = '_blank';
   githubButton.classList.add('github-button');
 
   const githubIcon = document.createElement('i');
@@ -66,6 +68,8 @@ const generateProjectCard = (project: Project): HTMLLIElement => {
 
   const liveButton = document.createElement('a');
   liveButton.href = project.liveURL;
+  liveButton.rel = 'noreferrer';
+  liveButton.target = '_blank';
   liveButton.classList.add('secondary-button');
 
   const liveButtonText = document.createTextNode('See Live Site');
