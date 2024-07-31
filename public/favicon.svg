@@ -1,0 +1,23 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+  .favicon-body {
+    fill: #d9d9d9;
+  }
+
+  .favicon-triangle {
+    fill: #bada55;
+  }
+
+  @media (prefers-color-scheme: light) {
+    .favicon-body {
+      fill: #5a5a76;
+    }
+
+    .favicon-triangle {
+      fill: #89a825
+    }
+  }
+</style>
+<path class="favicon-body" d="M61.855 0L115.595 48.855V76.7023L66.7405 101.13V71.3282L78.9542 62.7786L61.855 48.855V103.573L13 128V48.855L61.855 0Z"/>
+<path class="favicon-triangle" d="M115.595 82.1445V128L68.9245 105.499L115.595 82.1445Z"/>
+</svg>
