@@ -1,0 +1,22 @@
+@mixin center-contents($justify: true, $align: true) {
+  display: flex;
+
+  @if $justify {
+    justify-content: center;
+  }
+
+  @if $align {
+    align-items: center;
+  }
+}
+
+@mixin global-margin {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@mixin media($width) {
+  @media only screen and (width > $width) {
+    @content;
+  }
+}

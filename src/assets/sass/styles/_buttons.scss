@@ -1,0 +1,100 @@
+@use '../abstracts/' as *;
+
+.primary-button,
+.secondary-button,
+.github-button,
+.social-link {
+  @include center-contents;
+
+  cursor: pointer;
+  font-family: $text;
+  padding: 16px 20px;
+  border-radius: 3px;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.primary-button,
+.secondary-button {
+  border: 2px solid $accent;
+}
+
+.secondary-button,
+.github-button,
+.social-link {
+  font-weight: $medium;
+  color: $secondary;
+}
+
+.secondary-button,
+.github-button {
+  font-size: 1.25rem;
+}
+
+.primary-button {
+  background-color: $accent;
+  font-size: 1.5rem;
+  font-weight: $semi-bold;
+  color: $primary;
+  width: fit-content;
+  margin-top: 40px;
+}
+
+.secondary-button {
+  background-color: transparent;
+}
+
+.github-button {
+  background-color: $quinary;
+  gap: 12px;
+
+  i {
+    font-size: 2rem;
+  }
+}
+
+.social-link {
+  background-color: $quaternary;
+  font-size: 2rem;
+}
+
+.primary-button:hover {
+  background-color: transparent;
+  color: $secondary;
+}
+
+.secondary-button:hover {
+  background-color: $accent;
+  color: $primary;
+}
+
+.github-button:hover {
+  background-color: $tertiary;
+}
+
+.social-link:hover {
+  background-color: $quinary;
+}
+
+.primary-button:active,
+.secondary-button:active {
+  background-color: $secondary;
+  color: $primary;
+  border-color: $secondary;
+}
+
+.github-button:active {
+  background-color: $quaternary;
+}
+
+.social-link:active {
+  background-color: $tertiary;
+}
+
+.primary-button:disabled {
+  background-color: $quinary;
+  color: $quaternary;
+  border-color: $quaternary;
+}

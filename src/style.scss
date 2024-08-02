@@ -1,0 +1,74 @@
+@use './assets/sass/abstracts/' as *;
+@use './assets/sass/styles/about-section';
+@use './assets/sass/styles/buttons';
+@use './assets/sass/styles/carousel';
+@use './assets/sass/styles/footer';
+@use './assets/sass/styles/form';
+@use './assets/sass/styles/hello-section';
+@use './assets/sass/styles/navigation';
+@use './assets/sass/styles/project-cards';
+@use './assets/sass/styles/reset';
+@use './assets/sass/styles/text';
+
+:root {
+  font-family: $text;
+  color: $secondary;
+  background-color: $primary;
+  scroll-behavior: smooth;
+  scrollbar-color: $accent $quaternary;
+}
+
+body {
+  background-image: url('/deco-a.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 75px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 55px 0;
+}
+
+h1 {
+  span {
+    font-family: $code;
+    font-weight: $regular;
+    color: $accent;
+  }
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed $alternate;
+}
+
+p,
+label {
+  color: $alternate;
+}
+
+@include media(768px) {
+  body {
+    background-image: none;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+}
+
+@include media(1024px) {
+  section {
+    padding: 100px 0;
+  }
+}
+
+@include media(1920px) {
+  body {
+    border: 1px dashed $alternate;
+    border-top: none;
+  }
+}

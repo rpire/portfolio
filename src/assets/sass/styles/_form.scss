@@ -1,0 +1,112 @@
+@use '../abstracts' as *;
+
+#contact p,
+.contact-form {
+  @include global-margin;
+
+  margin-top: 30px;
+}
+
+.input-join,
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  gap: 6px;
+  margin-bottom: 20px;
+
+  small {
+    text-align: end;
+    color: $tertiary;
+    transition: color 0.2s;
+  }
+}
+
+input,
+textarea,
+input::placeholder,
+textarea::placeholder {
+  font-family: $text;
+  font-size: 1.25rem;
+}
+
+input,
+textarea {
+  background-color: color-mix(in srgb, $quaternary 90%, transparent);
+  color: $secondary;
+  padding: 16px 20px;
+  border: 1px solid $tertiary;
+  border-radius: 3px;
+  outline: none;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  background-color: $quinary;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: $tertiary;
+}
+
+.error {
+  color: $error;
+}
+
+.border-error {
+  border-color: $error;
+}
+
+.response {
+  font-size: 1.5rem;
+  text-align: center;
+
+  a {
+    color: $accent;
+  }
+}
+
+@include media(768px) {
+  #contact {
+    background-image: url('/form-deco.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom 100px;
+  }
+
+  .input-join {
+    flex-direction: row;
+    gap: 20px;
+
+    label {
+      width: 50%;
+    }
+  }
+}
+
+@include media(1024px) {
+  #contact h2 {
+    margin-bottom: 50px;
+  }
+
+  .contact-form,
+  #contact p {
+    max-width: 900px;
+    margin: 30px auto 0;
+
+    textarea {
+      height: 250px;
+    }
+  }
+}

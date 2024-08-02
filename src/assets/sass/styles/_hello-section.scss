@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+
+#hello {
+  @include global-margin;
+
+  img {
+    display: block;
+    mask-image: linear-gradient(to bottom, $primary 80%, transparent);
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 1;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@include media(768px) {
+  #hello {
+    @include center-contents(false);
+
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+
+    img,
+    header {
+      width: 50%;
+      margin: 0;
+    }
+  }
+}

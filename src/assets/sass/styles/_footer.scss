@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+footer,
+.social-links {
+  @include center-contents;
+}
+
+footer {
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 5% 5px;
+  border-top: 1px dashed $alternate;
+}
+
+.social-links {
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+@include media(768px) {
+  footer {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-bottom: 30px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .social-links {
+    justify-content: right;
+    gap: 50px;
+    width: 40%;
+  }
+}
