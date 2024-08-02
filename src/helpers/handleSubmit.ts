@@ -123,8 +123,8 @@ const generateErrorMessage = (section: HTMLElement): void => {
   const mailMeEnd = document.createTextNode('.');
 
   const mailMeLink = document.createElement('a');
-  mailMeLink.href = 'mailto:rpire.dev@outlook.com';
-  const mailMeLinkText = document.createTextNode('rpire.dev@outlook.com');
+  mailMeLink.href = 'mailto:rpiredev@outlook.com';
+  const mailMeLinkText = document.createTextNode('rpiredev@outlook.com');
 
   const button = document.createElement('button');
   button.type = 'button';
